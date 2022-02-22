@@ -2,14 +2,14 @@
 
 ## for DB instance
 - name: DB
-  hosts: "{{ var_db }}"
+  hosts: terraform_AmazonLinux2
   become_method: sudo
   roles:
      - SSITA_geocitizen_DB
 
 ## for server instance
 - name: Server
-  hosts: "{{ var_server }}"
+  hosts: terraform_Ubuntu
   become_method: sudo
   become: yes
   roles:
