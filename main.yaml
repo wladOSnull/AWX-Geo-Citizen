@@ -1,0 +1,18 @@
+---
+
+## for DB instance
+- name: DB
+  hosts: "{{ var_db }}"
+  become_method: sudo
+  roles:
+     - SSITA_geocitizen_DB
+
+## for server instance
+- name: Server
+  hosts: "{{ var_server }}"
+  become_method: sudo
+  become: yes
+  roles:
+    - SSITA_geocitizen_SERVER
+
+...
