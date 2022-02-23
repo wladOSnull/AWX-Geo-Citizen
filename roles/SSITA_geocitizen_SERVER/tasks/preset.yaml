@@ -21,3 +21,7 @@
 - name: install chrony
   apt:
     name: chrony
+
+- name: VARIABLE
+  debug:
+    var: DB_addr
