@@ -11,7 +11,7 @@
     - tomcat
 
 - name: deploy Geo Citizen
-  ansible.builtin.shell: "/home/ubuntu/project.sh {{ host_public }} {{ GEODB }}"
+  ansible.builtin.shell: "/home/ubuntu/project.sh {{ host_public }} {{ GEODB }} {{ EMAILADDR }} {{ EMAILPASS }}"
 
 - name: restart Tomcat
   become: yes

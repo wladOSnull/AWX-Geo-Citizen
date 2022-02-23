@@ -26,10 +26,10 @@
   set_fact:
     GEODB: "{{ DB_addr }}"
 
-- name: print set_stats variable
+- name: print e-mail address
   debug:
-    var: DB_addr
+    var: EMAILADDR
 
-- name: print private IP of DB
+- name: print e-mail password
   debug:
-    var: GEODB
+    var: EMAILPASS

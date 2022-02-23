@@ -24,7 +24,3 @@
   set_stats:
     data:
       DB_addr: "{{ host_private }}"
-
-- name: print private IP of DB
-  debug:
-    var: DB_addr
