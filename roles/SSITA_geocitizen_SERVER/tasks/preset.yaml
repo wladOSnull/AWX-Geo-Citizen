@@ -27,6 +27,10 @@
     data:
       GEODB: DB_addr
 
+- name: print set_stats variable
+  debug:
+    var: DB_addr
+
 - name: print private IP of DB
   debug:
     var: GEODB
