@@ -27,7 +27,7 @@
 
 - name: print e-mail address
   debug:
-    var: "{{ EMAILADDR }}"
+    var: "{{ lookup('env','EMAILADDR') }}"
 
 - name: print e-mail password
   debug:
