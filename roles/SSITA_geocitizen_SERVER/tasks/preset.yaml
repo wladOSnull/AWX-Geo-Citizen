@@ -22,6 +22,7 @@
   apt:
     name: chrony
 
-- name: VARIABLE
-  debug:
-    var: DB_addr
+- name: get private IP of DB
+  set_stats:
+    data:
+      GEODB: DB_addr
