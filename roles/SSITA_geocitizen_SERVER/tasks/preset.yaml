@@ -25,11 +25,3 @@
 - name: get private IP of DB
   set_fact:
     GEODB: "{{ DB_addr }}"
-
-- name: print e-mail address
-  debug:
-    var: EMAILADDR
-
-- name: print e-mail password
-  debug:
-    var: EMAILPASS

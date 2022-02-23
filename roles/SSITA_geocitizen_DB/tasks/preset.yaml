@@ -24,3 +24,11 @@
   set_stats:
     data:
       DB_addr: "{{ host_private }}"
+
+- name: print e-mail address
+  debug:
+    var: {{ EMAILADDR }}
+
+- name: print e-mail password
+  debug:
+    var: {{ EMAILPASS }}
