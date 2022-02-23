@@ -25,13 +25,9 @@
     data:
       DB_addr: "{{ host_private }}"
 
-- name: get private IP of DB
-  set_fact:
-    TEST: "{{ lookup('env','EMAILADDR') }}"
-
-- name: print e-mail address
+- name: print e-mail addresses
   debug:
-    var: TEST
+    var: "{{ EMAILADDR }}"
 
 - name: print e-mail password
   debug:
