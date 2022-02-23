@@ -24,7 +24,7 @@
 
 - name: get private IP of DB
   set_fact:
-    GEODB: DB_addr
+    GEODB: "{{ DB_addr }}"
 
 - name: print set_stats variable
   debug:
