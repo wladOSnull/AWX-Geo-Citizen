@@ -23,9 +23,8 @@
     name: chrony
 
 - name: get private IP of DB
-  set_stats:
-    data:
-      GEODB: DB_addr
+  set_fact:
+    GEODB: DB_addr
 
 - name: print set_stats variable
   debug:
