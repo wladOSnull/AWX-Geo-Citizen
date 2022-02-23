@@ -1,0 +1,11 @@
+---
+
+## for DB instance
+- name: DB
+  hosts: terraform_AmazonLinux2
+  become_method: sudo
+  remote_user: ec2-user
+  roles:
+     - SSITA_geocitizen_DB
+
+...
