@@ -1,0 +1,11 @@
+---
+
+## for DB instance
+- name: DB
+  hosts: db
+  become_method: sudo
+  remote_user: wlad1324
+  roles:
+     - SSITA_geocitizen_DB
+
+...

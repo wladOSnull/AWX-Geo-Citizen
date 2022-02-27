@@ -1,0 +1,12 @@
+---
+
+## for server instance
+- name: Server
+  hosts: server
+  remote_user: wlad1324
+  become_method: sudo
+  become: yes
+  roles:
+    - SSITA_geocitizen_SERVER
+
+...
