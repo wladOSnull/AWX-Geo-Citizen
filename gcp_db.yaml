@@ -11,6 +11,10 @@
       ansible.builtin.command: ansible-galaxy collection install community.postgresql
       delegate_to: 127.0.0.1
 
+    - name: install psycopg2-binary
+      ansible.builtin.command: pip install psycopg2-binary
+      delegate_to: 127.0.0.1
+
   roles:
      - SSITA_geocitizen_DB
 
