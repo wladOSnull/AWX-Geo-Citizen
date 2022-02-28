@@ -9,7 +9,7 @@
     state: present
 
 - name: update pip
-  command: "pip install --upgrade pip"
+  ansible.builtin.shell: "pip install --upgrade pip"
 
 - name: install Python packages
   become: yes
