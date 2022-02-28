@@ -8,12 +8,6 @@
     name: python3-pip
     state: present
 
-- name: upgrade pip
-  pip:    
-    name: pip
-    extra_args: --upgrade
-    executable: pip3
-
 - name: install Python packages
   become: yes
   pip:
