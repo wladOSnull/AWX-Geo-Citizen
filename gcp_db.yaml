@@ -5,6 +5,12 @@
   hosts: db
   become_method: sudo
   remote_user: wlad1324
+
+  tasks:
+    - name: install community.postgresql
+      ansible.builtin.command: ansible-galaxy collection install community.postgresql
+      delegate_to: 127.0.0.1
+
   roles:
      - SSITA_geocitizen_DB
 
