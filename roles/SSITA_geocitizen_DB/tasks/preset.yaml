@@ -21,7 +21,7 @@
   become: yes
   pip: "name={{ item }}  state=present"
   with_items:
-    - psycopg2-binary
+    - psycopg2
 
 - name: install PostgreSQL
   become: yes
