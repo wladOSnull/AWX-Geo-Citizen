@@ -12,6 +12,7 @@
   become: yes
   pip: 
     name: psycopg2-binary
+    executable: pip3
 
 - name: install PostgreSQL
   become: yes
