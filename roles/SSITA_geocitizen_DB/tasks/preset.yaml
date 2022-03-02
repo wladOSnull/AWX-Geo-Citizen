@@ -5,17 +5,22 @@
 - name: install python-pip
   become: yes
   yum:
-    name: python3-pip
+    name: python-pip
     state: present
 
 - name: install Python packages
   become: yes
-  pip: 
-    name: psycopg2-binary
-    executable: pip3
+  pip: "name={{ item }}  state=present"
+  with_items:
+    - psycopg2-binary
 
 - name: install PostgreSQL
   become: yes
   yum:
     name: postgresql-server.x86_64
     state: present
+
+- name: set private IP to variable
+  set_stats:
+    data:
+      DB_addr: "{{ host_private }}"
