@@ -1,26 +1,16 @@
-- name: update yum cache
-  yum:
-    update_cache: yes
-
-- name: install python-pip
+- name: "find out if PostgreSQL is initialized"
   become: yes
-  yum:
-    name: python-pip
-    state: present
+  ansible.builtin.stat:
+    path: "/var/lib/pgsql/data/pg_hba.conf"
+  register: postgres_data
 
-- name: install Python packages
+- name: "initialize PostgreSQL"
   become: yes
-  pip: "name={{ item }}  state=present"
+  command: "postgresql-setup initdb"
+  when: not postgres_data.stat.exists
+
+- name: "start and enable PostreSQL service"
+  become: yes
+  service: "name={{ item }} state=started enabled=yes"
   with_items:
-    - psycopg2-binary
-
-- name: install PostgreSQL
-  become: yes
-  yum:
-    name: postgresql-server.x86_64
-    state: present
-
-- name: set private IP to variable
-  set_stats:
-    data:
-      DB_addr: "{{ host_private }}"
+    - postgresql
