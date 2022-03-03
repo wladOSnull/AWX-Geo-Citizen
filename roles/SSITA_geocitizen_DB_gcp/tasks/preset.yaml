@@ -24,7 +24,3 @@
   set_stats:
     data:
       DB_addr: "{{ host_private }}"
-
-- name: install community.postgresql on localhost (for old AWX)
-  ansible.builtin.command: ansible-galaxy collection install community.postgresql
-  delegate_to: 127.0.0.1
