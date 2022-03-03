@@ -36,3 +36,7 @@
 - name: get private IP of DB
   set_fact:
     GEODB: "{{ DB_addr }}"
+
+- name: install community.general on localhost (for old AWX)
+  ansible.builtin.command: ansible-galaxy collection install community.general
+  delegate_to: 127.0.0.1
