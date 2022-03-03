@@ -1,0 +1,10 @@
+---
+# vars file for SSITA_geocitizen_DB
+
+db_name: ss_demo_1
+db_user: geocitizen
+db_password: weakpass
+
+#db_root_user: centos
+
+...

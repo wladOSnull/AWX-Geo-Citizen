@@ -1,0 +1,12 @@
+galaxy_info:
+  author: wladOSnull
+  description: simple role for deploying EC2 DB server on AWS for Geo Citizen application
+  company: SSITA DevOps
+  role_name: ssita_geocitizen_db
+  namespace: wladosnull
+  license: MIT
+
+  min_ansible_version: 2.1
+
+  platforms:
+  - name: Amazon

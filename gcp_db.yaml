@@ -6,17 +6,7 @@
   become_method: sudo
   remote_user: wlad1324
 
-  tasks:
-    - name: install community.postgresql
-      ansible.builtin.command: ansible-galaxy collection install community.postgresql
-      delegate_to: 127.0.0.1
-
-    - name: install psycopg2-binary
-      ansible.builtin.command: pip install psycopg2-binary
-      delegate_to: 127.0.0.1
-
-
   roles:
-     - SSITA_geocitizen_DB
+     - SSITA_geocitizen_DB_gcp
 
 ...
