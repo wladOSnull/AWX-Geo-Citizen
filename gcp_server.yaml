@@ -8,6 +8,6 @@
   become: yes
 
   roles:
-    - ssita_geocitizen_server
+    - wladosnull.ssita_geocitizen_server
 
 ...
