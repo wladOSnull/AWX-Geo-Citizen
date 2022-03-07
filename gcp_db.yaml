@@ -7,6 +7,6 @@
   remote_user: wlad1324
 
   roles:
-     - SSITA_geocitizen_DB_gcp
+     - ssita_geocitizen_db_gcp
 
 ...

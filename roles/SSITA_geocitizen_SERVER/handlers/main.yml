@@ -1,8 +1,0 @@
----
-# handlers file for SSITA_geocitizen_SERVER
-
-- name: restart Tomcat
-  ansible.builtin.systemd:
-    state: restarted
-    daemon_reload: yes
-    name: tomcat

@@ -1,7 +1,0 @@
----
-- name: Converge
-  hosts: all
-  tasks:
-    - name: "Include SSITA_geocitizen_DB"
-      include_role:
-        name: "SSITA_geocitizen_DB"

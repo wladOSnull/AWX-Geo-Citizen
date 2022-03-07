@@ -8,6 +8,6 @@
   become: yes
 
   roles:
-    - SSITA_geocitizen_SERVER
+    - ssita_geocitizen_server
 
 ...
