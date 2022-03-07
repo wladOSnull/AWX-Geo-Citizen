@@ -6,9 +6,4 @@ roles:
   - name: wladosnull.ssita_geocitizen_db_gcp
   - name: wladosnull.ssita_geocitizen_server
 
-collections:
-
-  - name: community.general
-  - name: community.postgresql
-
 ...
