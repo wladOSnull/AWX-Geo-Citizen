@@ -1,0 +1,13 @@
+---
+
+## for server instance
+- name: Server after autoscale
+  hosts: "{{ var_host }}"
+  remote_user: wlad1324
+  become_method: sudo
+  become: yes
+
+  roles:
+    - wladosnull.ssita_geocitizen_server
+
+...
