@@ -9,10 +9,5 @@
 
   roles:
     - wladosnull.ssita_geocitizen_db_gcp
-    - sensu.sensu_go.agent
-
-  vars:
-    agent_config:
-      backend-url: [ "ws://{{ sensu_backend }}" ]
 
 ...
